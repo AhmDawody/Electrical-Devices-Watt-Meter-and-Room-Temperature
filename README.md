@@ -7,6 +7,8 @@ The system is designed to provide real-time power consumption data through a web
 ## Installation and Configuration
 ### 1- esp8266 Installation and Configuration
 The wifi module is configured to recieve data from the microcontroller and to connect to home wifi and it behaves as access point.  
-First, I connected the module to Pc by using HW-417 (USB to TTL) converter, the connection schematic as below:  
+First, I connected the module to PC by using HW-417 (USB to TTL) converter, the connection schematic as below. 
 <div>
-  <img src="https://user-images.githubusercontent.com/107086104/224852000-d44a9da6-eb99-49ae-8691-aa5e7a2dba0c.jpg" width="500">
+  <img src="https://user-images.githubusercontent.com/107086104/224859652-112e6a1c-70e5-447d-bc8a-963c55c9a97a.png" width="600">
+</div>  
+- You shouldn't use the 3.3v source of the converter as the circuit power supply, because it will cause instability to the esp8266.

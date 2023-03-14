@@ -7,8 +7,14 @@ The system is designed to provide real-time power consumption data through a web
 ## Installation and Configuration
 ### 1- esp8266 Installation and Configuration
 The wifi module is configured to recieve data from the microcontroller and to connect to home wifi and it behaves as access point.  
-First, I connected the module to PC by using HW-417 (USB to TTL) converter, the connection schematic as below. 
+<br>1- Connect the module to PC by using HW-417 (USB to TTL) converter, the connection schematic as below. 
 <div>
   <img src="https://user-images.githubusercontent.com/107086104/224859652-112e6a1c-70e5-447d-bc8a-963c55c9a97a.png" width="600">
 </div>  
-- You shouldn't use the 3.3v source of the converter as the circuit power supply, because it will cause instability to the esp8266.
+- It is not recommended to use the 3.3v pin of the converter as the circuit power supply, because it will cause instability to the esp8266.<br>
+<br>2- The esp8266 module is programmed using Arduino IDE, open Arduino IDE and go to File->Preferences and paste this URL "http://arduino.esp8266.com/stable/package_esp8266com_index.json" in "Additional boards manager URLs" text box, then press OK to download esp8266 library.
+<br>3- To install the library go to Tools->Board->Boards Manager and type "esp8266" then the "esp" library will appear, install it.
+<br>4- Connect the "USB to TTL" converter to PC, then go to "select other board and port" on the right of the "debug" button and select the COM port of the converter and type "Generic ESP8266 Module" in BOARDS and select it.
+<br>5- Paste the source code of the "server_data.ino" file.
+<br>6- Before uploading the code the "esp" module must be in flash mode, this is done by holding "reset" button then hold "flash" button, then release "reset" then release "flash".
+<br>7- Now you can upload the code by pressing upload on the top left, after the uploading is done press the "reset" button.

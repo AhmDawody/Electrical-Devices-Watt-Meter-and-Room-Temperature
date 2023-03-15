@@ -1,9 +1,9 @@
-# IoT Room Temperature and Power Meter
-This project is a simple and affordable way to monitor room temperature and the power consumption of electrical devices using a single microcontroller board. The system is designed to measure the real-time power consumption of devices, allowing users to analyze and optimize their energy usage patterns.
+# IoT Based Room Temperature Meter
+This project is a simple and affordable way to monitor room temperature using a single microcontroller board. The system is designed to measure the real-time temperature.
 ## Project Overview
-The project is based on the **TM4C123GH6PM** microcontroller board with **ESP8266** WiFi module, the board is connected to a current sensor and a temperature sensor. The current sensor is used to measure the current flowing through the electrical device, while the temperature sensor is used to measure the ambient room temperature.
+The project is based on the **TM4C123GH6PM** microcontroller board with **ESP8266** WiFi module, the board is connected to a temperature sensor. The temperature sensor is used to measure the ambient room temperature.
 
-The system is designed to provide real-time power consumption data through a web-based user interface. The user can view the current temperature and power consumption of connected devices.
+The system is designed to provide real-time temperature data through a web-based user interface. The user can view the current temperature of the working room.
 ## Installation and Configuration
 ### 1- ESP8266 Installation and Configuration
 The wifi module is configured to recieve data from the microcontroller and to connect to home wifi and it behaves as access point.  
@@ -22,18 +22,9 @@ The wifi module is configured to recieve data from the microcontroller and to co
 <br>7- Now you can upload the code by pressing upload on the top left, after the uploading is done press the "reset" button.<br>
 
 ### 2-TM4C board Installation and Configuration
-The board is connected with : Current sensor **ACS712** 5A, Temperature sensor **LM35D** and Wifi module **ESP8266**.
-<br>1- The current sensor is connected to **PE3** (AIN0).
-<br>2- The temperature sensor is connected to **PE2** (AIN1).
+The board is connected with : Temperature sensor **LM35D** and Wifi module **ESP8266**.
+<br>1- The temperature sensor is connected to **PE2** (AIN1).
 <br>3- The Wifi module is connected to **PB0-PB1** (UART1).
 
 ## Important Notes
-* The source code is designed to operate in **220 V AC** system. to change it, open "watt.c" file go to function called **capture_watt** and change the value 220 to your system voltage.
-
-```
-uint8_t capture_watt(void){uint8_t x;
-    x = ((ADC_IN_AIN0()*18)/4096)*220;
-    return x;
-}
-```
 * The system is designed to run at 80 MHz, if you want to change it you have to change the baud rate of **UART** and the values of **RELOAD** in the Systick wait routines.

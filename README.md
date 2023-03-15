@@ -28,12 +28,12 @@ The board is connected with : Current sensor **ACS712** 5A, Temperature sensor *
 <br>3- The Wifi module is connected to **PB0-PB1** (UART1).
 
 ## Important Notes
-* The source code is designed to operate in **220 V AC** system. to change it, open "watt.c" file go to function called **capture** and change the value 220 to your system voltage.
+* The source code is designed to operate in **220 V AC** system. to change it, open "watt.c" file go to function called **capture_watt** and change the value 220 to your system voltage.
 
 ```
-uint8_t capture(void){uint8_t x;
+uint8_t capture_watt(void){uint8_t x;
     x = ((ADC_IN_AIN0()*18)/4096)*220;
     return x;
 }
 ```
-* The system is designed to run at 80 MHz, if you want to cange it you have to change the baud rate of **UART** and the values of **RELOAD** in the Systick wait routines.
+* The system is designed to run at 80 MHz, if you want to change it you have to change the baud rate of **UART** and the values of **RELOAD** in the Systick wait routines.

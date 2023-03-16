@@ -34,6 +34,7 @@ The Wi-Fi module is configured to recieve data from the microcontroller and send
 ### 2-TM4C123G board Installation and Configuration
 1- The temperature sensor pin 2 is connected to **PE2** (AIN1).
 <br>2- The Wi-Fi module **(Tx-Rx)** is connected to **PB0-PB1** **(Rx-Tx)** (UART1) respectively.
+<br>3- The alert consists of blue LED attached to the board (PF2), and turned on and off using PWM module.
 
 ## Important Notes
 * To open the module website, first connect to its Wi-Fi by finding its name and password written in "server_data.ino"<br>

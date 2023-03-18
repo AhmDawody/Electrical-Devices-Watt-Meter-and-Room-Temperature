@@ -43,7 +43,7 @@ The Wi-Fi module is configured to recieve data from the microcontroller and send
 const char* ssid = "ESP8266AP";
 const char* password = "password";
 ```
-now find your IP address for me it was **192.168.4.2**, now open a web browser and type the IP of the access point itself for me it was **192.168.4.1**.<br>
+now find your IP address, for me it is **192.168.4.2**, now open a web browser and type the IP of the access point itself, for me it is **192.168.4.1**.<br>
 You can find now the data sent by the microcontroller presenting the temperature.
 * The system is designed to run at 80 MHz, if you want to change it you have to change the baud rate of **UART** and the values of **RELOAD** in the Systick wait routines.
 * You can change the temperature threshold by changing the macro definition of it in the main program.<br>```#define THRESHOLD 30```

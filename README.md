@@ -27,7 +27,7 @@ The Wi-Fi module is configured to recieve data from the microcontroller and send
 <br>2- The **ESP8266** module is programmed using Arduino IDE, open Arduino IDE and go to **File->Preferences** and paste this URL "http://arduino.esp8266.com/stable/package_esp8266com_index.json" in **Additional boards manager URLs** text box, then press **OK** to download **ESP8266** library.
 <br>3- To install the library go to **Tools->Board->Boards Manager** and type "ESP8266" then **ESP** library will appear, install it.
 <br>4- Connect the "USB to TTL" converter to PC, then go to **select other board and port** on the right of the **debug** button and select the COM port of the converter and type "Generic ESP8266 Module" in **BOARDS** and select it.
-<br>5- Paste the source code of the "server_data.ino" file.
+<br>5- Paste the source code of the [server_data.ino](https://github.com/AhmDawody/IoT-Based-Room-Temperature-Meter/blob/main/Source%20Code/server_data/server_data.ino) file.
 <br>6- Before uploading the code the **ESP** module must be in **flash mode**, this is done by holding "reset" button then hold "flash" button, then release "reset" then release "flash".
 <br>7- Now you can upload the code by pressing **upload** arrow on the top left, after the uploading is done press the "reset" button to start the module.
 
@@ -37,7 +37,7 @@ The Wi-Fi module is configured to recieve data from the microcontroller and send
 <br>3- The alert consists of blue LED attached to the board (PF2), and turned on and off using PWM module.
 
 ## Important Notes
-* To open the module website, first connect to its Wi-Fi by finding its name and password written in "server_data.ino"<br>
+* To open the module website, first connect to its Wi-Fi by finding its name and password written in [server_data.ino](https://github.com/AhmDawody/IoT-Based-Room-Temperature-Meter/blob/main/Source%20Code/server_data/server_data.ino)<br>
 ```
 // Set the SSID and password for the access point
 const char* ssid = "ESP8266AP";
